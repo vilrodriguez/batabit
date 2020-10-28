@@ -1,0 +1,16 @@
+{
+  "name": "batabit",
+  "version": "1.0.0",
+  "description": "html5, css3, javascript, responsive first website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html5",
+    "css3",
+    "javascript"
+  ],
+  "author": "Vilmarys Rodriguez",
+  "license": "MIT"
+}
