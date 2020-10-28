@@ -6,20 +6,27 @@ Styles order
 4. Visual styles (shadow box, border radius etc)
 5. Miscelanous or others 
 */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+
 :root {
   /* COLORS */
   --bitcoin-orange: #F7931A;
   --soft-orange: #FFE9D5;
-  --secondary-blue: #1A9AF7;
-  --soft-blue: #E7F5FF;
   --warm-black: #201E1C;
   --warm-black1: #282623;
+  --secondary-blue: #1A9AF7;
+  --soft-blue: #E7F5FF;
   --grey: #BABABA;
   --off-white: #FAF8F7;
   --just-white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'DM Sans', sans-serif;
 }
