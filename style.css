@@ -156,6 +156,8 @@ main {
   font-size: 1.8rem;
   line-height: 2.3rem;
   margin-bottom: 15px;
+  text-align: left;
+  margin-left: 20px;
   color:var(--bitcoin-orange);
 }
 .main-currency-table .currency-table--container{
@@ -177,4 +179,58 @@ main {
   line-height: 1.9rem;
   color: var(--grey);
   background-color: var(--just-white);
+  text-align: left;
+  padding-left: 18px;
 }
+
+.currency-table--container .table__top-right{
+  border-top-right-radius: 15px;
+}
+.currency-table--container .table__top-left{
+  border-top-left-radius: 15px;
+}
+.currency-table--container .table__bottom-left{
+  border-bottom-left-radius: 15px;
+}
+.currency-table--container .table__bottom-right{
+  border-bottom-right-radius: 15px;
+}
+.currency-table--container .table__right{
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #757575;
+}
+.currency-table--container .down{
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  background-image: url('https://icongr.am/feather/trending-down.svg?size=128&color=f5450d');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.currency-table--container .up{
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  background-image: url('https://icongr.am/feather/trending-up.svg?size=128&color=07D635');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main-currency-table .currency-table__date{
+  width: 90%;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 8px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  background: var(--soft-orange);
+  border-radius: 8px;
+  color: var(--warm-black);
+}
+
+
