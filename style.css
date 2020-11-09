@@ -31,13 +31,13 @@ html {
   font-family: 'DM Sans', sans-serif;
 }
 header{
-  position: relative;
   width: 100%;
-  min-width: 320px;
   display: flex;
+  min-width: 320px;
+  position: relative;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
 }
 
@@ -49,9 +49,9 @@ header img {
 }
 .header--title-container {
   width: 90%;
+  height: 200px;
   max-width: 900px;
   min-width: 288px;
-  height: 200px;
   margin-top: 40px;
   text-align: center;
   align-self: center;
@@ -65,29 +65,29 @@ header img {
 }
 .header--title-container p {
   margin-top: 24px;
+  line-height: 18px;
   font-size: 1.5rem;
   font-weight: normal;
-  line-height: 18px;
   color:var(--soft-orange);
 }
 .header--title-container .header--button {
-  position: absolute;
+  border: none;
+  width: 228px;
+  height: 48px;
   display: flex;
   padding: 10px;
-  align-items: center;
-  justify-content: space-evenly;
-  border: none;
-  border-radius: 4px;
-  width: 228px;
-  top: calc(100% - 24px);
-	left: calc(50% - 114.5px);
-  height: 48px;
-  background: var(--off-white);
-  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
-  color:var(--warm-black);
-  font-size: 1.4rem;
-  text-decoration: none;
   font-weight: bold;
+  font-size: 1.4rem;
+  position: absolute;
+  border-radius: 4px;
+  align-items: center;
+  text-decoration: none;
+  top: calc(100% - 24px);
+  color:var(--warm-black);
+	left: calc(50% - 114.5px);
+  background: var(--off-white);
+  justify-content: space-evenly;
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
 }
 
 .header--title-container span{
@@ -125,7 +125,7 @@ main {
 .main-exchange-container--title{
   width: 90%;
   margin: 0 auto;
-  margin-bottom: 35px;
+  margin-bottom: 50px;
   min-width: 288px;
   max-width: 900px;
 }
@@ -142,7 +142,8 @@ main {
   color: #757575;
 }
 
-.main-currency-table{
+.main-currency-table,
+.main-comission-table{
   width: 70%;
   min-width: 235px;
   max-width: 500px;
@@ -151,16 +152,24 @@ main {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
 }
-.main-currency-table .currency-table--title{
+.main-currency-table .currency-table--title,
+.main-comission-table .comission-table--title{
   font-weight: bold;
   font-size: 1.8rem;
   line-height: 2.3rem;
   margin-bottom: 15px;
   text-align: left;
   margin-left: 20px;
-  color:var(--bitcoin-orange);
 }
-.main-currency-table .currency-table--container{
+.main-currency-table .currency-table--title{
+  color:var(--bitcoin-orange);
+
+}
+.main-comission-table .comission-table--title{
+  color:var(--secondary-blue);
+}
+.main-currency-table .currency-table--container,
+.main-comission-table .comission-table--container{
   width: 90%;
   min-width: 230px;
   max-width: 300px;
@@ -168,19 +177,50 @@ main {
   margin: 0 auto;
 }
 
-.currency-table--container table{
+.currency-table--container table,
+.comission-table--container ul{
   width: 100%;
   height: 100%;
 }
-.currency-table--container td{
-  width: 50%;
+
+.currency-table--container td,
+.comission-table--container ul {
+  /* width: 50%; */
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.9rem;
   color: var(--grey);
-  background-color: var(--just-white);
   text-align: left;
-  padding-left: 18px;
+  padding-left: 20px;
+}
+.currency-table--container td
+{
+  width: 50%;
+  background-color: var(--just-white);
+}
+
+.comission-table--container ul li {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 60px;
+  border-bottom: 2px solid var(--off-white);
+  background-color: var(--just-white);
+  padding-left: 20px;
+}
+.comission-table--container li span{
+  width: 50%;
+  padding-left: 8px;
+}
+.comission-table--container .table__top{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.comission-table--container .table__bottom{
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .currency-table--container .table__top-right{
@@ -195,10 +235,19 @@ main {
 .currency-table--container .table__bottom-right{
   border-bottom-right-radius: 15px;
 }
-.currency-table--container .table__right{
+.currency-table--container .table__right,
+.comission-table--container li span:nth-child(2){
   font-size: 1.4rem;
   font-weight: normal;
   color: #757575;
+}
+.comission-table--container li span:nth-child(2){
+  border-left: 2px solid var(--off-white);
+  height: 152%;
+  align-content: center;
+  padding: 15px;
+  align-items: center;
+  display: flex;
 }
 .currency-table--container .down{
   display: inline-block;
@@ -220,17 +269,27 @@ main {
   background-repeat: no-repeat;
   background-position: center;
 }
-.main-currency-table .currency-table__date{
+.main-currency-table .currency-table__date,
+.main-comission-table .comission-table__date{
   width: 90%;
+  max-width: 250px;
   height: 30px;
   margin: 0 auto;
   margin-top: 15px;
   padding: 8px;
   font-size: 1.2rem;
   font-weight: 300;
-  background: var(--soft-orange);
   border-radius: 8px;
   color: var(--warm-black);
+}
+
+.main-currency-table .currency-table__date{
+  background: var(--soft-orange);
+
+}
+.main-comission-table .comission-table__date{
+  background: var(--soft-blue);
+
 }
 
 
