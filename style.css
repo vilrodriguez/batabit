@@ -105,7 +105,8 @@ main {
   background-color: var(--off-white);
 }
 
-.main-exchange-container{
+.main-exchange-container,
+.main-text-container{
   width: 100%;
   height: auto;
   padding-top: 80px;
@@ -122,24 +123,47 @@ main {
   background-position: center;
   background-repeat: no-repeat;
 }
-.main-exchange-container--title{
+.main-exchange-container--title,
+.main-plans-container--title{
   width: 90%;
   margin: 0 auto;
   margin-bottom: 50px;
   min-width: 288px;
   max-width: 900px;
+  text-align: center;
 }
-.main-exchange-container--title h2{ 
+.main-exchange-container--title h2,
+.main-text-container--title h2,
+.main-plans-container--title h2{ 
   font-size: 2.4rem;
   font-weight: bold;
-  margin-bottom: 30px;
   line-height: 2.6rem;
-  color: var(--warm-black);
+  margin: 0px 24px;
+  margin-bottom: 30px;
+  flex: none;
+  
 }
-.main-exchange-container--title p{ 
+.main-exchange-container--title p,
+.main-text-container--title p,
+.main-plans-container--title p{ 
   font-size: 1.4rem;
   font-weight: 500;
+  margin: 0px 24px;
+  margin-bottom: 30px;
+  flex: none;
+}
+.main-exchange-container--title h2{
+  color: var(--warm-black);
+}
+.main-text-container--title h2{
+  color: var(--just-white);
+}
+.main-exchange-container--title p,
+.main-plans-container--title p{
   color: #757575;
+}
+.main-text-container--title p{
+  color: #808080;
 }
 
 .main-currency-table,
@@ -163,7 +187,6 @@ main {
 }
 .main-currency-table .currency-table--title{
   color:var(--bitcoin-orange);
-
 }
 .main-comission-table .comission-table--title{
   color:var(--secondary-blue);
@@ -289,7 +312,127 @@ main {
 }
 .main-comission-table .comission-table__date{
   background: var(--soft-blue);
-
 }
 
+/* CONTENT SECTION */
 
+.main-text-container{
+  background-color: var(--warm-black);
+}
+.main-text-container .iconlogo-container{
+  display: relative;
+  width: 50px;
+  height: 25px;
+  top: -50px;
+  z-index: 1;
+  background-image: url('./assets/imgs/potato1.svg');
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+.main-text-container .card{
+  width: 90%;
+  max-width: 288px;
+  height: fit-content;
+  margin: 0 auto 20px auto;
+  text-align: left;
+  border-radius: 4px;
+  padding: 1.5rem;
+  background-color: var(--warm-black1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+.main-text-container .card span{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 5px;
+}
+.main-text-container .card .icon-1{
+  background-image: url('https://icongr.am/feather/clock.svg?size=128&color=f7931a');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.main-text-container .card .icon-2{
+  background-image: url('https://icongr.am/feather/eye.svg?size=128&color=f7931a');
+}
+.main-text-container .card .icon-3{
+  background-image: url('https://icongr.am/feather/dollar-sign.svg?size=128&color=f7931a');
+}
+.main-text-container .card .icon-4{
+  background-image: url("https://icongr.am/feather/check-circle.svg?size=128&color=f7931a");
+}
+.main-text-container .card h4{
+  color:var(--just-white);
+  font-weight: bold;
+  line-height: 18px;
+  font-size: 18px;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+.main-text-container .card p{
+  color: #808080;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+.card-container {
+  list-style: none;
+}
+/* PLANS */
+.main-plans-container{
+  width: 100%;
+}
+.main-plans-container .img-container{
+  width: 100%;
+  height: 387px;
+  display: inline-block;
+  background-image: url("./assets/imgs/bitcoingirlpicture.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 60px;
+}
+
+.main-plans-container .img-container h2 {
+  font-size: 24px;
+  color: var(--just-white);
+  text-align: center;
+  margin-top: 60px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.plans-container{
+  width: 100%;
+  height: auto;
+}
+.plans-container .plan-card{
+  width: 190px;
+  height: 247px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  border-radius: 8px;
+  background-color: var(--just-white);
+  padding: 15px;
+  text-align: center;
+}
+
+.plans-container .plan-card .recomendado{
+  position: absolute;
+  display: inline-block;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  /* top: 0; */
+  width: 110px;
+  height:31px;
+  border-radius: 8px;
+  z-index: 1;
+  background-color: var(--bitcoin-orange);
+  color: var(--just-white);
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+
+}
