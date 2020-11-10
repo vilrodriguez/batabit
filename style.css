@@ -138,7 +138,7 @@ main {
   font-size: 2.4rem;
   font-weight: bold;
   line-height: 2.6rem;
-  margin: 0px 24px;
+  /* margin: 0px 24px; */
   margin-bottom: 30px;
   flex: none;
   
@@ -148,7 +148,6 @@ main {
 .main-plans-container--title p{ 
   font-size: 1.4rem;
   font-weight: 500;
-  margin: 0px 24px;
   margin-bottom: 30px;
   flex: none;
 }
@@ -208,7 +207,6 @@ main {
 
 .currency-table--container td,
 .comission-table--container ul {
-  /* width: 50%; */
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.9rem;
@@ -318,21 +316,26 @@ main {
 
 .main-text-container{
   background-color: var(--warm-black);
+  min-width: 320px;
+  position: relative;
+  padding: 50px 15px 35px 15px;
 }
 .main-text-container .iconlogo-container{
-  display: relative;
+  position: absolute;
   width: 50px;
   height: 25px;
-  top: -50px;
-  z-index: 1;
+  top: -12px;
+  left: calc(50% - 20px);
+  /* top: 1100px; */
   background-image: url('./assets/imgs/potato1.svg');
   background-repeat: no-repeat;
   margin: 0 auto;
 }
 .main-text-container .card{
-  width: 90%;
+  width: 100%;
   max-width: 288px;
   height: fit-content;
+  min-height: 150px;
   margin: 0 auto 20px auto;
   text-align: left;
   border-radius: 4px;
@@ -349,18 +352,18 @@ main {
   background-size: contain;
   margin-bottom: 5px;
 }
-.main-text-container .card .icon-1{
+.main-text-container .card .icon-clock{
   background-image: url('https://icongr.am/feather/clock.svg?size=128&color=f7931a');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.main-text-container .card .icon-2{
+.main-text-container .card .icon-eye{
   background-image: url('https://icongr.am/feather/eye.svg?size=128&color=f7931a');
 }
-.main-text-container .card .icon-3{
+.main-text-container .card .icon-dollar{
   background-image: url('https://icongr.am/feather/dollar-sign.svg?size=128&color=f7931a');
 }
-.main-text-container .card .icon-4{
+.main-text-container .card .icon-check{
   background-image: url("https://icongr.am/feather/check-circle.svg?size=128&color=f7931a");
 }
 .main-text-container .card h4{
@@ -384,15 +387,19 @@ main {
 /* PLANS */
 .main-plans-container{
   width: 100%;
+  background-color: var(--off-white);
+  padding-bottom: 65px;
 }
 .main-plans-container .img-container{
   width: 100%;
-  height: 387px;
+  height: 50vh;
+  min-width: 320px;
+  margin-bottom: 60px;
   display: inline-block;
   background-image: url("./assets/imgs/bitcoingirlpicture.png");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  margin-bottom: 60px;
 }
 
 .main-plans-container .img-container h2 {
@@ -411,28 +418,95 @@ main {
   width: 190px;
   height: 247px;
   margin: 0 auto;
-  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  color: #000000;
+  padding: 17px 30px;
+  position: relative;
+  text-align: center;
   border-radius: 8px;
   background-color: var(--just-white);
-  padding: 15px;
-  text-align: center;
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
 }
 
 .plans-container .plan-card .recomendado{
   position: absolute;
   display: inline-block;
   justify-items: center;
-  align-items: center;
   text-align: center;
-  /* top: 0; */
+  top: -15px;
   width: 110px;
   height:31px;
-  border-radius: 8px;
   z-index: 1;
-  background-color: var(--bitcoin-orange);
-  color: var(--just-white);
+  padding: 8px 0;
   font-size: 12px;
   font-weight: 700;
+  border-radius: 8px;
+  left: calc(50% - 52px);
+  color: var(--just-white);
   font-family: 'Inter', sans-serif;
+  background-color: var(--bitcoin-orange);
+  
+}
 
+.plans-container .plan-card .plan-freq{
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  margin-top: 15px;
+  
+}
+.plans-container .plan-card .plan-cost{
+  font-size: 52px;
+  font-weight: bolder;
+  line-height: 63px;
+  letter-spacing: -0.08em;
+  font-family: 'Inter', sans-serif;
+  margin-top: 8px;
+}
+.plans-container .plan-card .plan-cost>sup{
+  position: absolute;
+  top: 45px;
+  right: 130px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 63px;
+  letter-spacing: -0.08em;
+  color: #363636;
+}
+.plans-container .plan-card .plan-saving{
+  font-size: 12px;
+  font-weight: 500;
+  color: #757575;
+  font-style: normal;
+  line-height: 14.52px;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+}
+
+.plans-container .plan-card .plan-btn{
+  width: 100%;
+  height: 48px;
+  align-self: center;
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px 0;
+  border: 2px solid var(--bitcoin-orange);
+  background-color: var(--off-white);
+  margin-top: 15px;
+}
+.plans-container .plan-card .plan-btn > a{
+ color: #000000;
+ font-size: 14px;
+ font-weight: bold;
+ line-height: 18px;
+ text-decoration: none;
+}
+.plans-container .plan-card .plan-btn > a > span{
+ width: 10px;
+ height: 10px;
+ background-image: url('https://icongr.am/feather/arrow-right.svg?size=128&color=F7931A');
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
 }
