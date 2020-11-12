@@ -420,10 +420,10 @@ main {
   overflow-x: scroll;
   overscroll-behavior-x: contain;
   scroll-snap-type: x proximity;
+  margin: 0 60px;
 
 }
 .plans-container .plan-card{
-  
   min-width: 190px;
   max-width: 250px;
   height: 247px;
