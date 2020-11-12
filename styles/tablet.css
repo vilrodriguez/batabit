@@ -13,3 +13,6 @@ margin: 0 auto;
 .plans-container{
   justify-content: center;
 }
+.plans-container .plan-card{
+  margin: 35px 20px 0;
+}
