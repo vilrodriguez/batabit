@@ -169,7 +169,7 @@ main {
 .main-currency-table,
 .main-comission-table{
   width: 70%;
-  min-width: 235px;
+  min-width: 200px;
   max-width: 500px;
   height: 360px;
   margin: 0 auto;
@@ -182,8 +182,10 @@ main {
   font-size: 1.8rem;
   line-height: 2.3rem;
   margin-bottom: 15px;
+  margin: 0 auto 0 auto;
   text-align: left;
-  margin-left: 20px;
+  /* margin-left: 20px; */
+  width: 250px;
 }
 .main-currency-table .currency-table--title{
   color:var(--bitcoin-orange);
@@ -436,7 +438,6 @@ main {
   background-color: var(--just-white);
   box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
   /* para que las reglas de css del contenedor funcionen con las tarjetas*/
-  position: relative;
   scroll-snap-align: center;
 }
 
