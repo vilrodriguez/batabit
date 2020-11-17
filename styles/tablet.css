@@ -16,3 +16,6 @@ margin: 0 auto;
 .plans-container .plan-card{
   margin: 35px 20px 0;
 }
+.main-plans-container .img-container{
+  height: 60vh;
+}
