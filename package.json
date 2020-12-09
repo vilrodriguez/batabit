@@ -1,0 +1,14 @@
+{
+  "name": "batabit",
+  "version": "1.0.0",
+  "description": "html5, css3, javascript, responsive first website",
+  "main": "index.js",
+  "scripts": {  },
+  "keywords": [
+    "html5",
+    "css3",
+    "javascript"
+  ],
+  "author": "Vilmarys Rodriguez",
+  "license": "MIT"
+}

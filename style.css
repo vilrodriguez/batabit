@@ -1,0 +1,561 @@
+/* 
+Styles order
+1. Possition (display, position etc)
+2. Box Model (padding, margin, sizes, etc)
+3. Typography (font family, sizes, colores)
+4. Visual styles (shadow box, border radius etc)
+5. Miscelanous or others 
+*/
+
+:root {
+  /* COLORS */
+  --bitcoin-orange: #F7931A;
+  --soft-orange: #FFE9D5;
+  --warm-black: #201E1C;
+  --warm-black1: #282623;
+  --secondary-blue: #1A9AF7;
+  --soft-blue: #E7F5FF;
+  --grey: #BABABA;
+  --off-white: #FAF8F7;
+  --just-white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'DM Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+header{
+  width: 100%;
+  display: flex;
+  min-width: 320px;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+
+header img {
+  width: 150px;
+  height: 24px;
+  margin-top: 60px;
+  align-items: center;
+}
+.header--title-container {
+  width: 90%;
+  height: 200px;
+  max-width: 900px;
+  min-width: 288px;
+  margin-top: 40px;
+  text-align: center;
+  align-self: center;
+}
+
+.header--title-container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color:var(--just-white);
+}
+.header--title-container p {
+  margin-top: 24px;
+  line-height: 18px;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color:var(--soft-orange);
+}
+.header--title-container .header--button {
+  border: none;
+  width: 228px;
+  height: 48px;
+  display: flex;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  position: absolute;
+  border-radius: 4px;
+  align-items: center;
+  text-decoration: none;
+  top: calc(100% - 24px);
+  color:var(--warm-black);
+	left: calc(50% - 114.5px);
+  background: var(--off-white);
+  justify-content: space-evenly;
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.header--title-container span{
+  width: 25px;
+  height: 23px;
+  background-image: url('https://icongr.am/feather/chevron-down.svg?size=128&color=282623');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* MAIN */
+main {
+  width: 100%;
+  height: auto;
+  background-color: var(--off-white);
+}
+
+.main-exchange-container,
+.main-text-container{
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.main-exchange-container .backgroundImg {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background-image: url('./assets/imgs/bitcoin.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main-exchange-container--title,
+.main-plans-container--title{
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  min-width: 288px;
+  max-width: 900px;
+  text-align: center;
+}
+.main-exchange-container--title h2,
+.main-text-container--title h2,
+.main-plans-container--title h2{ 
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  /* margin: 0px 24px; */
+  margin-bottom: 30px;
+  flex: none;
+  
+}
+.main-exchange-container--title p,
+.main-text-container--title p,
+.main-plans-container--title p{ 
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  flex: none;
+}
+.main-exchange-container--title h2{
+  color: var(--warm-black);
+}
+.main-text-container--title h2{
+  color: var(--just-white);
+}
+.main-exchange-container--title p,
+.main-plans-container--title p{
+  color: #757575;
+}
+.main-text-container--title p{
+  color: #808080;
+}
+
+.main-currency-table,
+.main-comission-table{
+  width: 70%;
+  min-width: 200px;
+  max-width: 500px;
+  height: 360px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+.main-currency-table .currency-table--title,
+.main-comission-table .comission-table--title{
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  margin-bottom: 15px;
+  margin: 0 auto 15px auto;
+  text-align: left;
+  /* margin-left: 20px; */
+  width: 250px;
+}
+.main-currency-table .currency-table--title{
+  color:var(--bitcoin-orange);
+}
+.main-comission-table .comission-table--title{
+  color:var(--secondary-blue);
+}
+.main-currency-table .currency-table--container,
+.main-comission-table .comission-table--container{
+  width: 90%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.currency-table--container table,
+.comission-table--container ul{
+  width: 100%;
+  height: 100%;
+}
+
+.currency-table--container td,
+.comission-table--container ul {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  color: var(--grey);
+  text-align: left;
+  padding-left: 20px;
+}
+.currency-table--container td
+{
+  width: 50%;
+  background-color: var(--just-white);
+}
+
+.comission-table--container ul li {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 60px;
+  border-bottom: 2px solid var(--off-white);
+  background-color: var(--just-white);
+  padding-left: 20px;
+}
+.comission-table--container li span{
+  width: 50%;
+  padding-left: 8px;
+}
+.comission-table--container .table__top{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.comission-table--container .table__bottom{
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.currency-table--container .table__top-right{
+  border-top-right-radius: 15px;
+}
+.currency-table--container .table__top-left{
+  border-top-left-radius: 15px;
+}
+.currency-table--container .table__bottom-left{
+  border-bottom-left-radius: 15px;
+}
+.currency-table--container .table__bottom-right{
+  border-bottom-right-radius: 15px;
+}
+.currency-table--container .table__right,
+.comission-table--container li span:nth-child(2){
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #757575;
+}
+.comission-table--container li span:nth-child(2){
+  border-left: 2px solid var(--off-white);
+  height: 152%;
+  align-content: center;
+  padding: 15px;
+  align-items: center;
+  display: flex;
+}
+.currency-table--container .down{
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  background-image: url('https://icongr.am/feather/trending-down.svg?size=128&color=f5450d');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.currency-table--container .up{
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  background-image: url('https://icongr.am/feather/trending-up.svg?size=128&color=07D635');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main-currency-table .currency-table__date,
+.main-comission-table .comission-table__date{
+  width: 90%;
+  max-width: 250px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 8px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  border-radius: 8px;
+  color: var(--warm-black);
+}
+
+.main-currency-table .currency-table__date{
+  background: var(--soft-orange);
+
+}
+.main-comission-table .comission-table__date{
+  background: var(--soft-blue);
+}
+
+/* CONTENT SECTION */
+
+.main-text-container{
+  background-color: var(--warm-black);
+  min-width: 320px;
+  position: relative;
+  padding: 50px 15px 35px 15px;
+}
+.main-text-container .iconlogo-container{
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  top: -12px;
+  left: calc(50% - 20px);
+  /* top: 1100px; */
+  background-image: url('./assets/imgs/potato1.svg');
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+.main-text-container .card{
+  width: 100%;
+  max-width: 400px;
+  height: fit-content;
+  min-height: 150px;
+  margin: 0 auto 20px auto;
+  text-align: left;
+  border-radius: 4px;
+  padding: 1.5rem;
+  background-color: var(--warm-black1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+.main-text-container .card span{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 5px;
+}
+.main-text-container .card .icon-clock{
+  background-image: url('https://icongr.am/feather/clock.svg?size=128&color=f7931a');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.main-text-container .card .icon-eye{
+  background-image: url('https://icongr.am/feather/eye.svg?size=128&color=f7931a');
+}
+.main-text-container .card .icon-dollar{
+  background-image: url('https://icongr.am/feather/dollar-sign.svg?size=128&color=f7931a');
+}
+.main-text-container .card .icon-check{
+  background-image: url("https://icongr.am/feather/check-circle.svg?size=128&color=f7931a");
+}
+.main-text-container .card h4{
+  color:var(--just-white);
+  font-weight: bold;
+  line-height: 18px;
+  font-size: 18px;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+.main-text-container .card p{
+  color: #808080;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+.card-container {
+  list-style: none;
+}
+/* PLANS */
+.main-plans-container{
+  width: 100%;
+  background-color: var(--off-white);
+  padding-bottom: 65px;
+}
+.main-plans-container .img-container{
+  width: 100%;
+  height: 50vh;
+  min-width: 320px;
+  margin-bottom: 60px;
+  display: inline-block;
+  background-image: url("https://i.imgur.com/cFILlf2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main-plans-container .img-container h2 {
+  font-size: 24px;
+  color: var(--just-white);
+  text-align: center;
+  margin-top: 60px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.plans-container{
+  display: flex;
+  height: 320px;
+  justify-items: center;
+  align-items: center;
+  /* para el scroll horizontal de las tarjetas*/
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  margin: 0 60px;
+
+}
+.plans-container .plan-card{
+  min-width: 190px;
+  max-width: 250px;
+  height: 247px;
+  margin: 20px 5px 0;
+  color: #000000;
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+  border-radius: 8px;
+  background-color: var(--just-white);
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  /* para que las reglas de css del contenedor funcionen con las tarjetas*/
+  scroll-snap-align: center;
+}
+
+.plans-container .plan-card .recomendado{
+  position: absolute;
+  display: inline-block;
+  justify-items: center;
+  text-align: center;
+  top: -15px;
+  width: 110px;
+  height:31px;
+  z-index: 1;
+  padding: 8px 0;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 8px;
+  left: calc(50% - 52px);
+  color: var(--just-white);
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bitcoin-orange);
+  
+}
+
+.plans-container .plan-card .plan-freq{
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  margin-top: 15px;
+  
+}
+.plans-container .plan-card .plan-cost{
+  font-size: 52px;
+  font-weight: bolder;
+  line-height: 63px;
+  letter-spacing: -0.08em;
+  font-family: 'Inter', sans-serif;
+  margin: 12px auto;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width: 70%;
+  text-align: center;
+}
+.plans-container .plan-card .plan-cost > sup{
+  position: relative;
+  font-size: 12px;
+  top: -10px;
+  left: -10px;
+  font-weight: bold;
+  color: #363636;
+}
+.plans-container .plan-card .plan-saving{
+  font-size: 11px;
+  font-weight: 500;
+  color: #757575;
+  font-style: normal;
+  line-height: 14.52px;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+}
+
+.plans-container .plan-card .plan-btn{
+  width: 100%;
+  height: 48px;
+  align-self: center;
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px 0;
+  border: 2px solid var(--bitcoin-orange);
+  background-color: var(--off-white);
+  margin-top: 15px;
+}
+.plans-container .plan-card .plan-btn > a{
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+}
+.plans-container .plan-card .plan-btn > a > span{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('https://icongr.am/feather/arrow-right.svg?size=128&color=F7931A');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: bottom;
+}
+/* FOOTER */
+
+footer{
+  display: flex;
+  width: 100%;
+  height: 150px;
+  background-color: Var(--bitcoin-orange);
+
+}
+footer section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+footer .left ul {
+  list-style: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+}
+
+footer .left li {
+  margin: 10px 0;
+}
+footer .left a {
+  text-decoration: none;
+  color: white;
+}
